@@ -1,0 +1,6 @@
+rootProject.name = 'gildedrose'
+
+file("frontends").eachDir {
+    include it.name
+    project(":${it.name}").projectDir = it
+}
